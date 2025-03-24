@@ -14,3 +14,22 @@ A simple project that **handles Slack's verification URL** sent by Slack during 
 * Language: Python
 * Framework: Flask
 * Host: PythonAnywhere
+
+**HOW IT WORKS**
+
+1. Slack sends a POST request with this payload:\
+_{ \
+"type": "url_verification",\
+"token": "some-token",\
+"challenge": "test-challenge-value"\
+}_
+
+2. If _"type"="url_verification"_, the webhook extracts the challenge field and returns:\
+_{\
+  "challenge": "test-challenge-value"\
+}_
+
+**DEPLOYMENT STEPS**
+1. Uploaded 
+
+
